@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SignUp</title>
+  </head>
+  <body>
+    <h1>{{event_name}}</h1><br>
+  <h3> {{event_description}}</h3>
+
+    {% if var2 == user.id %}
+    <h1>Already Registered</h1>
+
+    {% else %}
+
+    {% if form.errors %}
+   {% for field in form %}
+       {% for error in field.errors %}
+           <div class="alert">
+               <strong>{{ error|escape }}</strong>
+           </div>
+       {% endfor %}
+   {% endfor %}
+   {% for error in form.non_field_errors %}
+       <div class="alert">
+           <strong>{{ error|escape }}</strong>
+       </div>
+   {% endfor %}
+{% endif %}
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="text" name="user" value="{{user.id}}" hidden>
+      <input type="text" name="first_name" value="{{user.first_name}}" hidden>
+      <input type="text" name="last_name" value="{{user.last_name}}" hidden>
+      <input type="text" name="email" value="{{user.email}}" hidden>
+      <input type="text" name="roll" value="{{user.roll}}" hidden>
+      <input type="text" name="phone" value="{{user.phone}}" hidden>
+      <input type="text" name="branch" value="{{user.branch}}" hidden>
+      <input type="text" name="section" value="{{user.section}}" hidden>
+      <input type="text" name="year" value="{{user.year}}" hidden>
+      <input type="text" name="team_name" placeholder="team_name" required>
+      <input type="text" name="number_of_members" placeholder="number_of_members" required>
+      <input type="text" name="member_1" placeholder="member_1" >
+      <input type="text" name="member_1" placeholder="member_2" >
+      <input type="text" name="member_1" placeholder="member_3" >
+      <input type="text" name="member_1" placeholder="member_4" >
+
+      <input type="submit" value="Register">
+
+
+    </form>
+
+    {% endif %}
+  </body>
+</html>
