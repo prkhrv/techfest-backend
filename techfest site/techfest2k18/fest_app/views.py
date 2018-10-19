@@ -13,6 +13,11 @@ from django.contrib.auth.decorators import login_required
 # models
 from Events.models import RoboSoccer,WaterRocketry,karyaniti,MindFizz,CodeWar,WebDesigning,TechnicalQuiz,PosterAndPresentation,IndustrialCaseStudy,RoboRace,StartUpMaster,GuessTheBond,JustaMinute,PosterMaking,Cosmetic
 
+#excel sheets
+import csv
+
+#HttpResponse
+from django.http import HttpResponse
 
 # Create your views here.
 @login_required
@@ -359,3 +364,161 @@ def bph02(request):
             form.save(commit=True)
             return redirect('/success/')
     return render(request,'register4.html',{'var2':var2,'event_name':event_name,'event_description':event_description,})
+
+def excel(request):
+
+    if(request.method=='POST'):
+        token = request.POST.get('token')
+        if(token == 'me01'):
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="WaterRocketry_participants.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year','Team Name','Member 1','Member 2','Member 3','Member 4',])
+
+            users = WaterRocketry.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year','team_name','member_1','member_2','member_3','member_4')
+            for user in users:
+                writer.writerow(user)
+            return response
+        elif(token == 'me02'):
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="RoboSoccer_participants.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year','Team Name','Member 1','Member 2','Member 3','Member 4',])
+            users = RoboSoccer.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year','team_name','member_1','member_2','member_3','member_4')
+            for user in users:
+                writer.writerow(user)
+            return response
+        elif(token == 'mba01'):
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="karyaniti_participants.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year','Team Name','Member 1','Member 2','Member 3','Member 4',])
+            users = karyaniti.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year','team_name','member_1','member_2','member_3','member_4')
+            for user in users:
+                writer.writerow(user)
+            return response
+        elif(token == 'ece01'):
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="MindFizz_participants.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year','Team Name','Member 1','Member 2','Member 3','Member 4',])
+            users = MindFizz.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year','team_name','member_1','member_2','member_3','member_4')
+            for user in users:
+                writer.writerow(user)
+            return response
+        elif(token == 'cse01'):
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="CodeWar_participants.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year','Team Name','Member 1','Member 2',])
+            users = CodeWar.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year','team_name','member_1','member_2')
+            for user in users:
+                writer.writerow(user)
+            return response
+
+        elif(token == 'it01'):
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="WebDesigning_participants.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year','Team Name','Member 1','Member 2',])
+            users = WebDesigning.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year','team_name','member_1','member_2')
+            for user in users:
+                writer.writerow(user)
+            return response
+
+        elif(token == 'mca01'):
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="TechnicalQuiz_participants.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year','Team Name','Member 1','Member 2',])
+            users = TechnicalQuiz.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year','team_name','member_1','member_2')
+            for user in users:
+                writer.writerow(user)
+            return response
+
+        elif(token == 'mca02'):
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="PosterAndPresentation_participants.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year',])
+            users = PosterAndPresentation.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year')
+            for user in users:
+                writer.writerow(user)
+            return response
+
+        elif(token == 'ch01'):
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="IndustrialCaseStudy_participant.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year','Team Name','Member 1','Member 2',])
+            users = IndustrialCaseStudy.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year','team_name','member_1','member_2')
+            for user in users:
+                writer.writerow(user)
+            return response
+        elif(token == 'en01'):
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="RoboRace_participants.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year','Team Name','Member 1','Member 2','Member 3','Member 4',])
+            users = RoboRace.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year','team_name','member_1','member_2','member_3','member_4')
+            for user in users:
+                writer.writerow(user)
+            return response
+
+        elif(token == 'en02'):
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="StartUpMaster_participants.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year','Team Name','Member 1','Member 2',])
+            users = StartUpMaster.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year','team_name','member_1','member_2')
+            for user in users:
+                writer.writerow(user)
+            return response
+
+        elif(token == 'civ01'):
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="GuessTheBond_participants.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year','Team Name','Member 1','Member 2',])
+            users = GuessTheBond.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year','team_name','member_1','member_2')
+            for user in users:
+                writer.writerow(user)
+            return response
+
+        elif(token == 'bt01'):
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="JustaMinute_participants.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year',])
+            users = JustaMinute.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year')
+            for user in users:
+                writer.writerow(user)
+            return response
+
+        elif(token == 'bph01'):
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="PosterMaking_participants.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year','Team Name','Member 1','Member 2',])
+            users = PosterMaking.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year','team_name','member_1','member_2')
+            for user in users:
+                writer.writerow(user)
+            return response
+
+        elif(token == 'bph02'):
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="Cosmetic_participants.csv"'
+            writer = csv.writer(response)
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year','Team Name','Member 1','Member 2',])
+            users = Cosmetic.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year','team_name','member_1','member_2')
+            for user in users:
+                writer.writerow(user)
+            return response
+
+        else:
+            error = "Please Enter a Valid Token"
+            return render(request,'download.html',{'error':error,})    
+
+    return render(request,'download.html')
+
+# *****************************************************
