@@ -1,16 +1,170 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>SignUp</title>
-  </head>
-  <body>
-    <form method="post" enctype="multipart/form-data">
-      {% csrf_token %}
-      {{form.as_p}}
-      <input type="submit" value="Sign Up">
+{% load staticfiles %}
+<html>
+<head>
+	<title>Techfest 2K18</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 
-    </form>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="">
+	<link rel="stylesheet" type="text/css" href="{% static "css/my.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/arc.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/style-event.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "css/home.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "css/signup.css" %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+  integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
-  </body>
+
+
+</head>
+<body>
+
+	 <!-- particles.js container -->
+		<div id="particles-js"></div>
+
+    <img style="position: relative; left: 22%; top: 5%;" src="{% static "images/logo1.png" %}" height="100">
+    <a href="/" class="btn btn-sm animated-button gibson-one">Home</a>
+    <div class="glitch" data-text="Ebullience 2K18" style="font-size: 40px; top:-20%;left:30%;">
+      Ebullience 2K18
+    </div>
+    <div class="glitch" data-text="Sign Up" style="top:-20%;left:45%;">
+      Sign Up
+    </div>
+
+	 <div class="notm" style="position: fixed; top:37.5%; height: 100%; width: 100%;">
+    <div class="arc_reactor">
+      <div class="case_container">
+        <div class="e7">
+          <div class="semi_arc_3 e5_1">
+            <div class="semi_arc_3 e5_2">
+              <div class="semi_arc_3 e5_3">
+                <div class="semi_arc_3 e5_4">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="core2"></div>
+          </div>
+          <ul class="marks">
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="error1">
+{% if form.errors %}
+{% for field in form %}
+{% for error in field.errors %}
+   <div class="alert">
+       <strong>{{ error|escape }}</strong>
+   </div>
+{% endfor %}
+{% endfor %}
+{% for error in form.non_field_errors %}
+<div class="alert">
+   <strong>{{ error|escape }}</strong>
+</div>
+{% endfor %}
+{% endif %}
+  </div>
+
+    <div class="form">
+      <form method="post">
+        {% csrf_token %}
+          <h2>Sign Up</h2>
+          <p type="Username:"><input class="myinp1" name="username" type="text" placeholder="Write your User Name here.." required=""></input></p>
+          <p type="First Name:"><input class="myinp1" name="first_name" type="text" placeholder="Write your First Name here.." required=""></input></p>
+          <p type="Last Name:"><input class="myinp1" name="last_name" type="text" placeholder="Write your Last Name here.." required=""></input></p>
+          <p type="Phone Number:"><input class="myinp1" name="phone" maxlength="10" type="text" placeholder="Enter your Phone Number here.." required=""></input></p>
+          <p type="Email:"><input class="myinp1" type="email" name="email" placeholder="Enter your Email here.." required=""></input></p>
+          <p type="Roll. No.:"><input class="myinp1" type="text" name="roll" maxlength="10" placeholder="Enter your Roll. No. here.." required=""></input></p>
+          <p type="Branch:">
+            <select name="branch" class="form-control selectpicker myinp1" required="">
+              <option value="">Select your Department/Branch</option>
+              <option value="CSE">CSE</option>
+              <option value="IT">IT</option>
+              <option value="MCA">MCA</option>
+              <option value="ME">ME</option>
+              <option value="MBA">MBA</option>
+              <option value="ECE">ECE</option>
+              <option value="CH">CH</option>
+              <option value="EN">EN</option>
+              <option value="CIVIL">Civil Engineering</option>
+              <option value="BT">BioTech</option>
+              <option value="B.Ph">B.Pharma</option>
+            </select></p>
+          <p type="Section:">
+            <select name="section" class="form-control selectpicker myinp1" required="">
+              <option value="">Select your Section</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+            </select></p>
+          <p type="Year:">
+            <select name="year" class="form-control selectpicker myinp1" required="">
+            <option value="">Select your Year</option>
+              <option value="1st">1st</option>
+              <option value="2nd">2nd</option>
+              <option value="3rd">3rd</option>
+              <option value="4th">4th</option>
+            </select></p>
+          <p type="Password:"><input class="myinp1" id="password1" name="password1" type="password" placeholder="Enter your Password.." required=""></input></p>
+          <p type="Confirm Password:"><input class="myinp1" id="password2" name="password2" type="password" placeholder="Re-enter the Password.." required=""></input></p>
+
+
+
+          <button>Sign Up</button>
+          <!-- <div>
+            <span class="fa fa-phone"></span>+91 6397931192
+            <span></span> Prakhar Varshnay
+            <br>
+            <span class="fa fa-phone"></span>+91 7982745634
+            <span></span> Piyush Mishra
+          </div> -->
+        </form>
+    </div>
+
+
+
+
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+
+	<script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+	<script  src="{% static "js/index.js" %}"></script>
+  <script  src="{% static "js/signup.js" %}"></script>
+  <script type="text/javascript">
+	     var password = document.getElementById("password1"),confirm_password = document.getElementById("password2");
+
+        function validatePassword(){
+          if(password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+          }else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
+
+
+</body>
 </html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title>Techfest 2K18</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="">
+	<link rel="stylesheet" type="text/css" href="{% static "css/my.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/arc.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/style-event.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "css/home.css" %}">
+
+</head>
+<body>
+
+	 <!-- particles.js container -->
+		<div id="particles-js"></div>
+
+    <img id="logo" src="{% static "images/logo1.png" %}" height="80">
+    <a href="{% url 'home' %}" class="btn btn-sm animated-button gibson-one">Home</a>
+    <div class="glitch" data-text="Events" style="top:-20%;left:45%;">
+      Events
+    </div>
+
+	 <div class="notm" style="position: fixed; top:37.5%; height: 120%; width: 100%;">
+    <div class="arc_reactor1">
+      <div class="case_container">
+        <div class="e7">
+          <div class="semi_arc_3 e5_1">
+            <div class="semi_arc_3 e5_2">
+              <div class="semi_arc_3 e5_3">
+                <div class="semi_arc_3 e5_4">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="core2"></div>
+          </div>
+          <ul class="marks">
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-2 first-button">
+      <a href="{% url 'me01' %}" style="text-decoration:none; outline: 0;"><div class="btn btn-two text-center">
+        <span>Water Rocketry</span>
+      </div></a>
+    </div>
+    <div class="container-2 second-button">
+      <a href="{% url 'me02' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>Robo Soccer</span>
+      </div></a>
+    </div>
+    <div class="container-2 third-button">
+      <a href="{% url 'mba01' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>Karyaniti</span>
+      </div></a>
+    </div>
+    <div class="container-2 fourth-button">
+      <a href="{% url 'ece01' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>Mind Fizz</span>
+      </div></a>
+    </div>
+    <div class="container-2 fifth-button">
+      <a href="{% url 'cse01' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>Code War</span>
+      </div></a>
+    </div>
+    <div class="container-2 sixth-button">
+      <a href="{% url 'it01' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>Web Designing</span>
+      </div></a>
+    </div>
+    <div class="container-2 seventh-button">
+      <a href="{% url 'mca01' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>Technical Quiz</span>
+      </div></a>
+    </div>
+    <div class="container-2 eigth-button">
+      <a href="{% url 'mca02' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>E-Poster Making(MCA)</span>
+      </div></a>
+    </div>
+    <div class="container-2 ninth-button">
+      <a href="{% url 'ch01' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>Industrial Case Study</span>
+      </div></a>
+    </div>
+    <div class="container-2 tenth-button">
+      <a href="{% url 'en01' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>Robo Race</span>
+      </div></a>
+    </div>
+    <div class="container-2 eleventh-button">
+      <a href="{% url 'en02' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>PUBG</span>
+      </div></a>
+    </div>
+    <div class="container-2 twelfth-button">
+      <a href="{% url 'civ01' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>Guess The Bond?</span>
+      </div></a>
+    </div>
+    <div class="container-2 thirteenth-button">
+      <a href="{% url 'bt01' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>Just A Minute</span>
+      </div></a>
+    </div>
+    <div class="container-2 fourteenth-button">
+      <a href="{% url 'bph01' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>Poster Making(B.PHARMA)</span>
+      </div></a>
+    </div>
+    <div class="container-2 fifteenth-button">
+      <a href="{% url 'bph02' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>Cosmetics</span>
+      </div></a>
+    </div>
+    <div class="container-2 sixteenth-button">
+      <a href="E3.html" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>Start-Up Exhibition</span>
+      </div></a>
+    </div>
+
+
+
+
+
+
+
+	<script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+	<script  src="{% static "js/index.js" %}"></script>
+
+
+</body>
+</html>

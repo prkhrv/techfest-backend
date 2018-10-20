@@ -4,14 +4,14 @@ from django.urls import reverse_lazy
 
 #Forms
 from fest_app.forms import CustomUserCreationForm
-from Events.forms import WaterRocketryForm,RoboSoccerForm,karyanitiForm,MindFizzForm,CodeWarForm,WebDesigningForm,TechnicalQuizForm,PosterAndPresentationForm,IndustrialCaseStudyForm,RoboRaceForm,StartUpMasterForm,GuessTheBondForm,JustaMinuteForm,PosterMakingForm,CosmeticForm
+from Events.forms import WaterRocketryForm,RoboSoccerForm,karyanitiForm,MindFizzForm,CodeWarForm,WebDesigningForm,TechnicalQuizForm,PosterAndPresentationForm,IndustrialCaseStudyForm,RoboRaceForm,PUBGForm,GuessTheBondForm,JustaMinuteForm,PosterMakingForm,CosmeticForm
 from django.contrib.auth.forms import UserCreationForm
 
 # decorators
 from django.contrib.auth.decorators import login_required
 
 # models
-from Events.models import RoboSoccer,WaterRocketry,karyaniti,MindFizz,CodeWar,WebDesigning,TechnicalQuiz,PosterAndPresentation,IndustrialCaseStudy,RoboRace,StartUpMaster,GuessTheBond,JustaMinute,PosterMaking,Cosmetic
+from Events.models import RoboSoccer,WaterRocketry,karyaniti,MindFizz,CodeWar,WebDesigning,TechnicalQuiz,PosterAndPresentation,IndustrialCaseStudy,RoboRace,PUBG,GuessTheBond,JustaMinute,PosterMaking,Cosmetic
 
 #excel sheets
 import csv
@@ -23,6 +23,10 @@ from django.http import HttpResponse
 @login_required
 def index(request):
     return render(request,'index.html')
+
+@login_required
+def events(request):
+    return render(request,'events.html')    
 
 class SignUp(generic.CreateView):
     form_class = CustomUserCreationForm
@@ -258,20 +262,20 @@ def en01(request):
 #11
 def en02(request):
     #event_name
-    event_name = "START UP MASTERS"
+    event_name = "PUBG"
     #event_description
     event_description = "Here is the description"
     # ********************************************************
-    form = StartUpMasterForm()
+    form = PUBGForm()
     abc = request.user
     try:
-        var1 = StartUpMaster.objects.filter(user = abc)
+        var1 = PUBG.objects.filter(user = abc)
         var2 = var1.values_list('user',flat=True).get()
-    except StartUpMaster.DoesNotExist:
+    except PUBG.DoesNotExist:
         var2 = 0
 
     if(request.method=='POST'):
-        form = StartUpMasterForm(request.POST)
+        form = PUBGForm(request.POST)
         if(form.is_valid()):
             form.save(commit=True)
             return redirect('/success/')
@@ -467,10 +471,10 @@ def excel(request):
 
         elif(token == 'en02'):
             response = HttpResponse(content_type='text/csv')
-            response['Content-Disposition'] = 'attachment; filename="StartUpMaster_participants.csv"'
+            response['Content-Disposition'] = 'attachment; filename="PUBG_participants.csv"'
             writer = csv.writer(response)
-            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year','Team Name','Member 1','Member 2',])
-            users = StartUpMaster.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year','team_name','member_1','member_2')
+            writer.writerow(['First Name', 'Last Name', 'Email','Roll Number','Phone Number','Branch','Section','Year',])
+            users = PUBG.objects.all().values_list('first_name', 'last_name', 'email', 'roll','phone','branch','section','year')
             for user in users:
                 writer.writerow(user)
             return response
@@ -517,7 +521,7 @@ def excel(request):
 
         else:
             error = "Please Enter a Valid Token"
-            return render(request,'download.html',{'error':error,})    
+            return render(request,'download.html',{'error':error,})
 
     return render(request,'download.html')
 

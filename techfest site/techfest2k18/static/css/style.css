@@ -1,11 +1,12 @@
 /* ---- reset ---- */
 @font-face{
-  font-family: 'aven';
-  src: url('../fonts/a3.ttf');
+	font-family: 'aven';
+	src: url('../fonts/a3.ttf');
 }
 
 body {
   margin: 0;
+  font:normal 75% Arial, Helvetica, sans-serif;
 }
 
 canvas {
@@ -68,14 +69,13 @@ div[class*=container] {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 
 .btn {
-  position: relative;
   font-family: aven;
-  font-size: 12px;
-  outline: 0;
+  position: relative;
   color: white;
   width: 256px;
   height: 64px;
@@ -101,7 +101,7 @@ div[class*=container] {
 .btn-one::before {
   left: 4px;
   z-index: 1;
-  
+
   opacity: 0;
   background: rgba(2, 254, 255, 0.1);
   transform: scale(0.1, 1);
@@ -132,7 +132,7 @@ div[class*=container] {
   left: 0;
   z-index: 1;
   transition: all 0.3s;
-  border: 1px solid rgba(2, 254, 255, 0.5);
+  border: 3px solid rgba(2, 254, 255, 0.5);
 }
 
 .btn-two:hover::after {
@@ -140,13 +140,13 @@ div[class*=container] {
   animation-duration: 2s;
 }
 .btn-two:hover::before {
-  animation-name: rotateccw; 
+  animation-name: rotateccw;
   animation-duration: 3s;
 }
 .btn-two:hover::after, .btn-two:hover::before {
   left: 96px;
   width: 64px;
-  
+
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -273,7 +273,7 @@ div[class*=container] {
 .btn-one::before {
   left: 4px;
   z-index: 1;
-  
+
   opacity: 0;
   background: rgba(2, 254, 255, 0.1);
   transform: scale(0.1, 1);
@@ -312,13 +312,13 @@ div[class*=container] {
   animation-duration: 2s;
 }
 .btn-two:hover::before {
-  animation-name: rotateccw; 
+  animation-name: rotateccw;
   animation-duration: 3s;
 }
 .btn-two:hover::after, .btn-two:hover::before {
   left: 48px;
   width: 32px;
-  
+
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -338,9 +338,8 @@ div[class*=container] {
      top: 5%;
     }
     #logo{
-      margin-left: 15px;
-      margin-top: 25px;
-      height: 90px;
+      margin-left: 35px;
+      margin-top: 10px;
+      height: 100px;
     }
 }
-

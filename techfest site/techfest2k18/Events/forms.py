@@ -1,5 +1,5 @@
 from django import forms
-from .models import RoboSoccer,WaterRocketry,karyaniti,MindFizz,CodeWar,WebDesigning,TechnicalQuiz,PosterAndPresentation,IndustrialCaseStudy,RoboRace,StartUpMaster,GuessTheBond,JustaMinute,PosterMaking,Cosmetic
+from .models import RoboSoccer,WaterRocketry,karyaniti,MindFizz,CodeWar,WebDesigning,TechnicalQuiz,PosterAndPresentation,IndustrialCaseStudy,RoboRace,PUBG,GuessTheBond,JustaMinute,PosterMaking,Cosmetic
 
 
 #1
@@ -58,28 +58,29 @@ class RoboRaceForm(forms.ModelForm):
         model = RoboRace
         fields = ('user','first_name','last_name','email','roll','phone','branch','section','year','team_name','number_of_members','member_1','member_2','member_3','member_4',)
 #11
-class StartUpMasterForm(forms.ModelForm):
-    class Meta():
-        model = StartUpMaster
-        fields = ('user','first_name','last_name','email','roll','phone','branch','section','year','team_name','number_of_members','member_1','member_2',)
-#12
 class GuessTheBondForm(forms.ModelForm):
     class Meta():
         model = GuessTheBond
         fields = ('user','first_name','last_name','email','roll','phone','branch','section','year','team_name','number_of_members','member_1','member_2',)
-#13
+#12
 class JustaMinuteForm(forms.ModelForm):
     class Meta():
         model = JustaMinute
         fields = ('user','first_name','last_name','email','roll','phone','branch','section','year',)
 
-#14
+#13
 class PosterMakingForm(forms.ModelForm):
     class Meta():
         model = PosterMaking
         fields = ('user','first_name','last_name','email','roll','phone','branch','section','year','team_name','number_of_members','member_1','member_2',)
-#15
+#14
 class CosmeticForm(forms.ModelForm):
     class Meta():
         model = Cosmetic
         fields = ('user','first_name','last_name','email','roll','phone','branch','section','year','team_name','number_of_members','member_1','member_2',)
+
+#15
+class PUBGForm(forms.ModelForm):
+    class Meta():
+        model = PUBG
+        fields = ('user','first_name','last_name','email','roll','phone','branch','section','year',)

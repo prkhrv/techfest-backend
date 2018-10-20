@@ -1,0 +1,25 @@
+@font-face{
+	font-family: 'aven';
+	src: url('../fonts/a3.ttf');
+}
+
+#dwd1{
+  background-color: rgba(85,91,124,0.5);
+  height: 265px;
+  width: 330px;
+  border-radius: 5px;
+
+
+}
+
+#dwd1 h1{
+  font-family: aven;
+}
+
+.dwdinp{
+  background-color: transparent;
+  font-family: aven;
+  /* border: 0; */
+  border-bottom: 2px solid aqua;
+  padding: 10px;
+}

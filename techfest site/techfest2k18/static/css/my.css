@@ -8,6 +8,27 @@ body{
 	overflow-x: hidden;
 }
 
+.myinp1{
+	font-family: aven !important ;
+	/* font-family: 'Bai Jamjuree', sans-serif !important; */
+	/* font-size: 12px !important; */
+}
+
+.error{
+	color:  red;
+	text-align: center;
+	margin-top: -20px;
+	font-size: 15px;
+}
+
+.error1{
+	color:  red;
+	text-align: center;
+	margin-top: -70px;
+	font-size: 15px;
+}
+
+
 
 .prkhr1{
   left: 36% !important;
@@ -20,6 +41,7 @@ body{
 	position: relative;
 	top: -175px;
 	right: 40px;
+	font-size: 15px;
 }
 
 .glitch {
@@ -196,4 +218,11 @@ body{
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+@media only screen and (max-width: 768px) {
+	.error{
+		font-size: 10px;
+		margin-top: 50px;
+	}
 }

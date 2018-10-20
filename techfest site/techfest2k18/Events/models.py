@@ -225,29 +225,7 @@ class RoboRace(models.Model):
     def __str__(self):
         return self.first_name
 
-
 # 11
-class StartUpMaster(models.Model):
-    user = models.OneToOneField(CustomUser,on_delete=models.CASCADE)
-    first_name = models.CharField(max_length=20,default='')
-    last_name = models.CharField(max_length=20,default='')
-    email = models.EmailField(max_length=40,default='')
-    roll = models.CharField(max_length=10,default='')
-    phone = models.CharField(max_length=10,default='')
-    branch = models.CharField(max_length=10,default='')
-    section = models.CharField(max_length=2,default='')
-    year = models.CharField(max_length=10,default='')
-    event_id = models.CharField(max_length=5,default='EN02')
-    event_name = models.CharField(max_length=30,default='START UP MASTER')
-    team_name = models.CharField(max_length=20,default='')
-    number_of_members = models.CharField(max_length=20,default='')
-    member_1 = models.CharField(max_length=20,default='',blank=True)
-    member_2 = models.CharField(max_length=20,default='',blank=True)
-
-    def __str__(self):
-        return self.first_name
-
-# 12
 class GuessTheBond(models.Model):
     user = models.OneToOneField(CustomUser,on_delete=models.CASCADE)
     first_name = models.CharField(max_length=20,default='')
@@ -269,7 +247,7 @@ class GuessTheBond(models.Model):
         return self.first_name
 
 
-# 13
+# 12
 class JustaMinute(models.Model):
     user = models.OneToOneField(CustomUser,on_delete=models.CASCADE)
     first_name = models.CharField(max_length=20,default='')
@@ -287,7 +265,7 @@ class JustaMinute(models.Model):
         return self.first_name
 
 
-# 14
+# 13
 class PosterMaking(models.Model):
     user = models.OneToOneField(CustomUser,on_delete=models.CASCADE)
     first_name = models.CharField(max_length=20,default='')
@@ -309,7 +287,7 @@ class PosterMaking(models.Model):
         return self.first_name
 
 
-# 15
+# 14
 class Cosmetic(models.Model):
     user = models.OneToOneField(CustomUser,on_delete=models.CASCADE)
     first_name = models.CharField(max_length=20,default='')
@@ -326,6 +304,24 @@ class Cosmetic(models.Model):
     number_of_members = models.CharField(max_length=20,default='')
     member_1 = models.CharField(max_length=20,default='',blank=True)
     member_2 = models.CharField(max_length=20,default='',blank=True)
+
+    def __str__(self):
+        return self.first_name
+
+# 15
+class PUBG(models.Model):
+    user = models.OneToOneField(CustomUser,on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=20,default='')
+    last_name = models.CharField(max_length=20,default='')
+    email = models.EmailField(max_length=40,default='')
+    roll = models.CharField(max_length=10,default='')
+    phone = models.CharField(max_length=10,default='')
+    branch = models.CharField(max_length=10,default='')
+    section = models.CharField(max_length=2,default='')
+    year = models.CharField(max_length=10,default='')
+    event_id = models.CharField(max_length=5,default='PUBG')
+    event_name = models.CharField(max_length=30,default='PUBG')
+
 
     def __str__(self):
         return self.first_name

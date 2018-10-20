@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="{% static "css/arc.css" %}">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+	<link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
 
 </head>
 <body>
@@ -58,27 +59,27 @@
 		  </div>
 		</div>
 		<div class="container-2 first-button">
-			<a href="index.html" style="text-decoration:none;"><div class="btn btn-two text-center">
+			<a href="/" style="text-decoration:none; outline:0;"><div class="btn btn-two text-center">
 			  <span>Home</span>
 			</div></a>
 		</div>
 		<div class="container-2 second-button">
-			<a href="events.html" style="text-decoration:none; outline: 0;"><div class="btn btn-two text-center">
+			<a href="{% url 'events' %}" style="text-decoration:none; outline: 0;"><div class="btn btn-two text-center">
 			  <span>Events</span>
 			</div></a>
 		</div>
 		<div class="container-2 third-button">
-			<a href="volunteer-login.html" style="text-decoration:none;"><div class="btn btn-two text-center">
+			<a href="{% url 'excel' %}" style="text-decoration:none;outline:0;"><div class="btn btn-two text-center">
 			  <span>Co-ordinator's Panel</span>
 			</div></a>
 		</div>
 		<div class="container-2 fourth-button">
-			<a href="adminlogin.html" style="text-decoration:none;"><div class="btn btn-two text-center">
+			<a href="/admin" style="text-decoration:none;outline:0;"><div class="btn btn-two text-center">
 			  <span>Admin's Panel</span>
 			</div></a>
 		</div>
 		<div class="container-2 fifth-button">
-			<a href="about.html" style="text-decoration:none;"><div class="btn btn-two text-center">
+			<a href="about.html" style="text-decoration:none;outline:0;"><div class="btn btn-two text-center">
 			  <span>About Us</span>
 			</div></a>
 		</div>

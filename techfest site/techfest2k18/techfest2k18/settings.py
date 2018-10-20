@@ -27,7 +27,7 @@ SECRET_KEY = '(pl^&i!^x-=d*z62ky+=&w5=)3hf440etry5wyhxzbu268et=^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -117,6 +117,13 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+#Email
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'codenova486@gmail.com'
+EMAIL_HOST_PASSWORD = 'nova_rise'
+EMAIL_USE_TLS = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
