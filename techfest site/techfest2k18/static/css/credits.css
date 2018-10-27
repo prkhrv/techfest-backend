@@ -1,0 +1,35 @@
+.credits{
+  border : 2px solid transparent;
+  padding:1%;
+  border-radius:8px;box-shadow:0 0 40px -10px #000;
+  position: absolute;
+  bottom:0%;
+  width:100%;
+  background:rgba(85,91,124,0.5);
+  font-family: aven;
+  text-align: center;
+  font-size: 14px !important ;
+}
+.credits a{
+  text-decoration:none;
+  color:rgba(2, 254, 255, 0.5);
+}
+
+@media only screen and (max-width: 768px) {
+  .credits{
+    border : 2px solid transparent;
+    padding:1px;
+    border-radius:8px;box-shadow:0 0 40px -10px #000;
+    position: absolute;
+    bottom:-20%;
+    width:100%;
+    background:rgba(85,91,124,0.5);
+    font-family: aven;
+    text-align: center;
+    font-size: 10px !important ;
+  }
+  .credits a{
+    text-decoration:none;
+    color:rgba(2, 254, 255, 0.5);
+  }
+}

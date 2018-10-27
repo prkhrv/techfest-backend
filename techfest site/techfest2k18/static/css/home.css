@@ -151,9 +151,29 @@ a.animated-button.gibson-four:hover:after {
 	a.animated-button{
 		position: absolute;
 		top:-15%;
-		left:40%;
+		left:30%;
 		height:10px;
 		width:100px;
 		line-height: 20px;
+	}
+	a.animated-button:link, a.animated-button:visited {
+		position: relative;
+		display: block;
+		margin: 10px auto 0;
+		padding: 10px 10px;
+		color: #fff;
+		font-size:14px;
+		border-radius: 0;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		overflow: hidden;
+		letter-spacing: .08em;
+		text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease;
 	}
 }

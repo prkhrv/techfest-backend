@@ -2,6 +2,7 @@
 {% load staticfiles %}
 <html>
 <head>
+		<link rel="shortcut icon" href="{% static "images/logo1.png" %}" height="16">
 	<title>Techfest 2K18</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
@@ -13,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="{% static "css/arc.css" %}">
 	<link rel="stylesheet" type="text/css" href="{% static "css/style-event.css" %}">
   <link rel="stylesheet" type="text/css" href="{% static "css/home.css" %}">
-  <link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "css/download.css" %}">
 	<link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
   integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
@@ -25,13 +26,13 @@
 	 <!-- particles.js container -->
 		<div id="particles-js"></div>
 
-    <img style="position: relative; left: 22%; top: 5%;" src="{% static "images/logo1.png" %}" height="100">
+    <img id="logosign" style="position: relative; left: 22%; top: 5%;" src="{% static "images/logo1.png" %}" height="100">
     <!-- <a href="index.html" class="btn btn-sm animated-button gibson-one">Home</a> -->
-    <div class="glitch" data-text="Ebullience 2K18" style="font-size: 40px; top:-5%;left:30%;">
+		<div class="glitch dwdlogo" data-text="Ebullience 2K18">
       Ebullience 2K18
     </div>
-    <div class="glitch" data-text="Coordinator's Panel" style="top:-5%;left:35%;">
-      Coordinator's Panel
+    <div class="glitch vpanel" data-text="Volunteer's Panel" style="top:-10%;left:36%;">
+      Volunteer's Panel
     </div>
 
 	 <div class="notm" style="position: fixed; top:37.5%; height: 100%; width: 100%;">
@@ -67,6 +68,8 @@
 		{% if form.errors %}
 	          {{ form.non_field_errors }}
 	  {% endif %}
+
+		{{error}}
 
   </div><br>
 

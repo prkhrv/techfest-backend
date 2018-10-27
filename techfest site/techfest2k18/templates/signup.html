@@ -4,6 +4,7 @@
 <head>
 	<title>Techfest 2K18</title>
   <meta charset="UTF-8">
+		<link rel="shortcut icon" href="{% static "images/logo1.png" %}" height="16">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -25,12 +26,12 @@
 	 <!-- particles.js container -->
 		<div id="particles-js"></div>
 
-    <img style="position: relative; left: 22%; top: 5%;" src="{% static "images/logo1.png" %}" height="100">
+    <img id="logosign" style="position: relative; left: 22%; top: 5%;" src="{% static "images/logo1.png" %}" height="100">
     <a href="/" class="btn btn-sm animated-button gibson-one">Home</a>
-    <div class="glitch" data-text="Ebullience 2K18" style="font-size: 40px; top:-20%;left:30%;">
+    <div class="glitch signgl" data-text="Ebullience 2K18">
       Ebullience 2K18
     </div>
-    <div class="glitch" data-text="Sign Up" style="top:-20%;left:45%;">
+    <div id="signup1" class="glitch" data-text="Sign Up" style="top:-20%;left:45%;">
       Sign Up
     </div>
 
@@ -101,7 +102,7 @@
               <option value="ECE">ECE</option>
               <option value="CH">CH</option>
               <option value="EN">EN</option>
-              <option value="CIVIL">Civil Engineering</option>
+              <option value="CIV">Civil Engineering</option>
               <option value="BT">BioTech</option>
               <option value="B.Ph">B.Pharma</option>
             </select></p>

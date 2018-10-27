@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
+
+
     <meta name="mobile-web-app-capable" content="yes">
 
     <title>Register</title>
@@ -24,10 +25,9 @@
     <div id="desc">
         <h4> {{event_description}}</h4><br>
     </div>
-  <div id="regdetails">
-
+    <div id="regdetails">
     <div id="rules">
-      <h2>Rules</h2>
+      <h3>Rules</h3>
       <ul style="list-style-type:disc">
         {% for a in rules %}
         <li>{{a}}</li>
@@ -38,7 +38,7 @@
     </div>
 
     <div id="judge">
-      <h2>Juding Criteria</h2>
+      <h3>Juding Criteria</h3>
       <ul style="list-style-type:disc">
         {% for b in judge %}
         <li>{{b}}</li>
@@ -52,17 +52,17 @@
       <h3>Venue :- {{venue}}</h3>
     </div>
     <div id="contact">
-      <h2>Contact</h2>
+      <h3>Contact:</h3>
       <ul style="list-style-type:disc">
         {% for c in contact %}
         <li>{{c}}</li>
         {% endfor %}
       </ul>
-    </div>
-  </div>
+    </div></div>
 
 
-  <div class="notm" style="position: fixed; top:37.5%; height: 100%; width: 100%;z-index: 0;">
+
+  <div class="notm" style="position: fixed; top:37.5%; height: 100%; width: 100%;">
    <div class="arc_reactor">
      <div class="case_container">
        <div class="e7">
@@ -93,7 +93,7 @@
    </div>
 
     {% if var2 == user.id %}
-    <h1 style="color: green; font-size: 25px;" >Already Registered</h1>
+    <h1 style="color: green;font-size: 25px;" >Already Registered</h1>
 
     {% else %}
 
@@ -128,8 +128,8 @@
         <option value="" disabled selected="" >Select</option>
         <option value="1">1</option>
         <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
+        <!-- <option value="3">3</option>
+        <option value="4">4</option> -->
       </select><br><br>
 
       <div id="one" style="display: none;">
@@ -139,7 +139,7 @@
       <label for="two_member_1">Member 1</label><br> <input type="text" id="two_member_1" name="member_1" placeholder="member_1" ><br><br>
       <label for="two_member_2">Member 2</label><br> <input type="text" id="two_member_2" name="member_2" placeholder="member_2" ><br><br>
      </div>
-     <div id="three" style="display: none;" >
+     <!-- <div id="three" style="display: none;" >
       <label for="three_member_1">Member 1</label><br><input type="text" id="three_member_1" name="member_1" placeholder="member_1" ><br><br>
       <label for="three_member_2">Member 2</label><br><input type="text" id="three_member_2" name="member_2" placeholder="member_2" ><br><br>
       <label for="three_member_3">Member 3</label><br><input type="text" id="three_member_3" name="member_3" placeholder="member_3" ><br><br>
@@ -149,7 +149,7 @@
        <label for="four_member_2">Member 2</label><br><input type="text" id="four_member_2" name="member_2" placeholder="member_2" ><br><br>
        <label for="four_member_3">Member 3</label><br><input type="text" id="four_member_3" name="member_3" placeholder="member_3" ><br><br>
        <label for="four_member_4">Member 4</label><br><input type="text" id="four_member_4" name="member_4" placeholder="member_4" ><br><br>
-     </div>
+     </div> -->
 
       <input class="regbtn" type="submit" value="Register">
 
@@ -178,35 +178,35 @@
           document.getElementById("two_member_2").disabled = true;
           // document.getElementById("designation").required = false;
         }
-        if (that.value == "3")  {
-            document.getElementById("three").style.display = "block";
-            document.getElementById("three_member_1").disabled = false;
-            document.getElementById("three_member_2").disabled = false;
-            document.getElementById("three_member_3").disabled = false;
-            // document.getElementById("designation").required = true;
-        } else {
-          document.getElementById("three").style.display = "none";
-          document.getElementById("three_member_1").disabled = true;
-          document.getElementById("three_member_2").disabled = true;
-          document.getElementById("three_member_3").disabled = true;
-        }
-        if (that.value == "4")  {
-            document.getElementById("four").style.display = "block";
-            document.getElementById("four_member_1").disabled = false;
-            document.getElementById("four_member_2").disabled = false;
-            document.getElementById("four_member_3").disabled = false;
-            document.getElementById("four_member_4").disabled = false;
-
-            // document.getElementById("designation").required = true;
-        } else {
-          document.getElementById("four").style.display = "none";
-          document.getElementById("four_member_1").disabled = true;
-          document.getElementById("four_member_2").disabled = true;
-          document.getElementById("four_member_3").disabled = true;
-          document.getElementById("four_member_4").disabled = true;
-
-          // document.getElementById("designation").required = false;
-        }
+        // if (that.value == "3")  {
+        //     document.getElementById("three").style.display = "block";
+        //     document.getElementById("three_member_1").disabled = false;
+        //     document.getElementById("three_member_2").disabled = false;
+        //     document.getElementById("three_member_3").disabled = false;
+        //     // document.getElementById("designation").required = true;
+        // } else {
+        //   document.getElementById("three").style.display = "none";
+        //   document.getElementById("three_member_1").disabled = true;
+        //   document.getElementById("three_member_2").disabled = true;
+        //   document.getElementById("three_member_3").disabled = true;
+        // }
+        // if (that.value == "4")  {
+        //     document.getElementById("four").style.display = "block";
+        //     document.getElementById("four_member_1").disabled = false;
+        //     document.getElementById("four_member_2").disabled = false;
+        //     document.getElementById("four_member_3").disabled = false;
+        //     document.getElementById("four_member_4").disabled = false;
+        //
+        //     // document.getElementById("designation").required = true;
+        // } else {
+        //   document.getElementById("four").style.display = "none";
+        //   document.getElementById("four_member_1").disabled = true;
+        //   document.getElementById("four_member_2").disabled = true;
+        //   document.getElementById("four_member_3").disabled = true;
+        //   document.getElementById("four_member_4").disabled = true;
+        //
+        //   // document.getElementById("designation").required = false;
+        // }
     }
 </script>
 <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>

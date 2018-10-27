@@ -1,11 +1,67 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Registration successful</h1>
+{% load staticfiles %}
+<html>
+<head>
+  	<link rel="shortcut icon" href="{% static "images/logo1.png" %}" height="16">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  </body>
+	<title>Techfest 2K18</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/my.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/arc.css" %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+  
+	<link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
+
+</head>
+<body>
+
+	 <!-- particles.js container -->
+		<div id="particles-js"></div>
+
+		<!-- gltich text -->
+		<img id="logo" src="{% static "images/logo1.png" %}" height="160">
+		<div class="glitch" data-text="Noida Institute of Engineering and Technology">
+			Noida Institute of Engineering and Technology <hr>
+		</div>
+		<div class="glitch prkhr3" data-text="EBULLIENCE2K18">
+			EBULLIENCE2K18
+		</div>
+		<!-- <div id="prkhr2">
+			Welcome,{{user.username}}
+		</div> -->
+    <center><h1 id="sukc">You Have Successfully Registered for this event.</h1></center>
+		 <div style="position: fixed; top:25%; height: 100%; width: 100%;">
+		  <div class="arc_reactor">
+		    <div class="case_container">
+		      <div class="e7">
+		        <div class="semi_arc_3 e5_1">
+		          <div class="semi_arc_3 e5_2">
+		            <div class="semi_arc_3 e5_3">
+		              <div class="semi_arc_3 e5_4">
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="core2"></div>
+		      </div>
+		      <ul class="marks">
+		        <li></li><li></li><li></li><li></li><li></li><li></li>
+		        <li></li><li></li><li></li><li></li><li></li><li></li>
+		        <li></li><li></li><li></li><li></li><li></li><li></li>
+		        <li></li><li></li><li></li><li></li><li></li><li></li>
+		        <li></li><li></li><li></li><li></li><li></li><li></li>
+		        <li></li><li></li><li></li><li></li><li></li><li></li>
+		        <li></li><li></li><li></li><li></li><li></li><li></li>
+		        <li></li><li></li><li></li><li></li><li></li><li></li>
+		        <li></li><li></li><li></li><li></li><li></li><li></li>
+		        <li></li><li></li><li></li><li></li><li></li><li></li>
+		      </ul>
+		    </div>
+		  </div>
+		</div>
+	<script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+	<script  src="{% static "js/index.js" %}"></script>
+
+</body>
 </html>

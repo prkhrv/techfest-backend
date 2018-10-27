@@ -24,7 +24,7 @@ body{
 .error1{
 	color:  red;
 	text-align: center;
-	margin-top: -70px;
+	margin-top: -10px;
 	font-size: 15px;
 }
 
@@ -32,6 +32,10 @@ body{
 
 .prkhr1{
   left: 36% !important;
+}
+
+.prkhr3{
+	left: 36% !important;
 }
 
 #prkhr2{
@@ -56,6 +60,12 @@ body{
  top: -145px;
 }
 
+#sukc{
+	font-family: aven;
+	color: green !important;
+	font-size: 15px;
+	margin-top: -100px;
+}
 
 
 #logo{
@@ -224,5 +234,12 @@ body{
 	.error{
 		font-size: 10px;
 		margin-top: 50px;
+	}
+	#sukc{
+		margin-top: 25px;
+	}
+	.prkhr3{
+		top: 17% !important;
+		margin-bottom: 10px;
 	}
 }

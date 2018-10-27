@@ -1,5 +1,5 @@
 from django import forms
-from .models import RoboSoccer,WaterRocketry,karyaniti,MindFizz,CodeWar,WebDesigning,TechnicalQuiz,PosterAndPresentation,IndustrialCaseStudy,RoboRace,PUBG,GuessTheBond,JustaMinute,PosterMaking,Cosmetic
+from .models import RoboSoccer,WaterRocketry,karyaniti,MindFizz,CodeWar,WebDesigning,TechnicalQuiz,PosterAndPresentation,IndustrialCaseStudy,RoboRace,PUBG,GuessTheBond,JustaMinute,PosterMaking,Cosmetic,ECELL,Photography
 
 
 #1
@@ -83,4 +83,16 @@ class CosmeticForm(forms.ModelForm):
 class PUBGForm(forms.ModelForm):
     class Meta():
         model = PUBG
+        fields = ('user','first_name','last_name','email','roll','phone','branch','section','year',)
+
+#16
+class ECELLForm(forms.ModelForm):
+    class Meta():
+        model = ECELL
+        fields = ('user','first_name','last_name','email','roll','phone','branch','section','year','team_name','number_of_members','member_1','member_2','member_3','member_4',)
+
+#17
+class PhotographyForm(forms.ModelForm):
+    class Meta():
+        model = Photography
         fields = ('user','first_name','last_name','email','roll','phone','branch','section','year',)

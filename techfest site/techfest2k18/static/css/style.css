@@ -250,7 +250,7 @@ div[class*=container] {
   position: relative;
   color: white;
   width: 128px;
-  height: 32px;
+  height: 64px;
   line-height: 32px;
   transition: all 0.3s;
   span {
@@ -316,8 +316,8 @@ div[class*=container] {
   animation-duration: 3s;
 }
 .btn-two:hover::after, .btn-two:hover::before {
-  left: 48px;
-  width: 32px;
+  left: 32px;
+  width: 64px;
 
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -328,7 +328,7 @@ div[class*=container] {
     /* For mobile phones: */
     .glitch {
       color: white;
-      font-size: 15px;
+      font-size: 13px;
       font-family: aven;
       position: absolute;
       width: auto;
@@ -337,9 +337,20 @@ div[class*=container] {
       left: 40%;
      top: 5%;
     }
+		#prkhrv{
+			color: white;
+			font-size: 15px;
+			font-family: aven;
+			position: absolute;
+			width: auto;
+			margin: 0 auto;
+			text-transform: uppercase;
+			left: 50%;
+		 top: 20%;
+		 font-size:10px;
+		}
     #logo{
-      margin-left: 35px;
-      margin-top: 10px;
-      height: 100px;
+
+      height: 80px;
     }
 }

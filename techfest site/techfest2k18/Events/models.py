@@ -325,3 +325,41 @@ class PUBG(models.Model):
 
     def __str__(self):
         return self.first_name
+#16
+class ECELL(models.Model):
+    user = models.OneToOneField(CustomUser,on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=20,default='')
+    last_name = models.CharField(max_length=20,default='')
+    email = models.EmailField(max_length=40,default='')
+    roll = models.CharField(max_length=10,default='')
+    phone = models.CharField(max_length=10,default='')
+    branch = models.CharField(max_length=10,default='')
+    section = models.CharField(max_length=2,default='')
+    year = models.CharField(max_length=10,default='')
+    event_id = models.CharField(max_length=5,default='ecell')
+    event_name = models.CharField(max_length=20,default='Idea Pitching')
+    team_name = models.CharField(max_length=20,default='')
+    number_of_members = models.CharField(max_length=20,default='')
+    member_1 = models.CharField(max_length=20,default='',blank=True)
+    member_2 = models.CharField(max_length=20,default='',blank=True)
+    member_3 = models.CharField(max_length=20,default='',blank=True)
+    member_4 = models.CharField(max_length=20,default='',blank=True)
+    def __str__(self):
+        return self.first_name
+#17
+class Photography(models.Model):
+    user = models.OneToOneField(CustomUser,on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=20,default='')
+    last_name = models.CharField(max_length=20,default='')
+    email = models.EmailField(max_length=40,default='')
+    roll = models.CharField(max_length=10,default='')
+    phone = models.CharField(max_length=10,default='')
+    branch = models.CharField(max_length=10,default='')
+    section = models.CharField(max_length=2,default='')
+    year = models.CharField(max_length=10,default='')
+    event_id = models.CharField(max_length=5,default='Photography')
+    event_name = models.CharField(max_length=30,default='Photography')
+
+
+    def __str__(self):
+        return self.first_name

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import RoboSoccer,WaterRocketry,karyaniti,MindFizz,CodeWar,WebDesigning,TechnicalQuiz,PosterAndPresentation,IndustrialCaseStudy,RoboRace,PUBG,GuessTheBond,JustaMinute,PosterMaking,Cosmetic
+from .models import RoboSoccer,WaterRocketry,karyaniti,MindFizz,CodeWar,WebDesigning,TechnicalQuiz,PosterAndPresentation,IndustrialCaseStudy,RoboRace,PUBG,GuessTheBond,JustaMinute,PosterMaking,Cosmetic,ECELL,Photography
 
 # Register your models here.
 admin.site.register(WaterRocketry) #1
@@ -17,3 +17,5 @@ admin.site.register(GuessTheBond) #12
 admin.site.register(JustaMinute) #13
 admin.site.register(PosterMaking) #14
 admin.site.register(Cosmetic) #15
+admin.site.register(ECELL) #16
+admin.site.register(Photography)#17

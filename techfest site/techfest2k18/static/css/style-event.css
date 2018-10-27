@@ -205,7 +205,7 @@ div[class*=container] {
 .seventh-button {
   position:absolute;
   top:90%;
-  left:30%;
+  left:20%;
   text-align: center;
 }
 .eigth-button {
@@ -247,7 +247,7 @@ div[class*=container] {
 .fourteenth-button {
   position:absolute;
   top:90%;
-  left:50%;
+  left:60%;
   text-align: center;
 }
 .fifteenth-button {
@@ -262,6 +262,12 @@ div[class*=container] {
       left:40%;
       text-align: center;
     }
+.seventeenth-button {
+      position:absolute;
+      top:90%;
+      left:40%;
+      text-align: center;
+}
 @media only screen and (max-width: 768px) {
 
     .notm {
@@ -369,15 +375,26 @@ div[class*=container] {
     }
     .fifteenth-button {
       position:absolute;
-      top:90%;
-      left:35%;
+      top:102.5%;
+      left:0%;
       text-align: center;
     }
     .sixteenth-button {
       position:absolute;
-      top:15%;
-      left:35%;
+      top:102.5%;
+      left:auto;
+      right:1% !important;
       text-align: center;
+    }
+    .seventeenth-button {
+      position:absolute;
+      top:115%;
+      left:32.5%;
+      right:auto;
+      text-align: center;
+    }
+    canvas{
+      height:125% !important;
     }
 
     .btn {

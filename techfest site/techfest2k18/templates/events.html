@@ -3,6 +3,7 @@
 <html>
 <head>
 	<title>Techfest 2K18</title>
+	<link rel="shortcut icon" href="{% static "images/logo1.png" %}" height="16">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 
@@ -21,7 +22,7 @@
 		<div id="particles-js"></div>
 
     <img id="logo" src="{% static "images/logo1.png" %}" height="80">
-    <a href="{% url 'home' %}" class="btn btn-sm animated-button gibson-one">Home</a>
+    <a href="{% url 'home' %}" class="btn btn-sm animated-button gibson-one mobile">Home</a>
     <div class="glitch" data-text="Events" style="top:-20%;left:45%;">
       Events
     </div>
@@ -63,7 +64,7 @@
     </div>
     <div class="container-2 second-button">
       <a href="{% url 'me02' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
-        <span>Robo Soccer</span>
+        <span>Robo War</span>
       </div></a>
     </div>
     <div class="container-2 third-button">
@@ -132,10 +133,15 @@
       </div></a>
     </div>
     <div class="container-2 sixteenth-button">
-      <a href="E3.html" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
-        <span>Start-Up Exhibition</span>
+      <a href="{% url 'ecell' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+        <span>An Idea for Future</span>
       </div></a>
     </div>
+		<div class="container-2 seventeenth-button">
+		<a href="{% url 'pixels' %}" style="text-decoration:none;outline: 0;"><div class="btn btn-two text-center">
+			<span>Photography</span>
+		</div></a>
+	</div>
 
 
 

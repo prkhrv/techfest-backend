@@ -2,18 +2,15 @@
 {% load staticfiles %}
 <html>
 <head>
-
+  	<link rel="shortcut icon" href="{% static "images/logo1.png" %}" height="16">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="shortcut icon" href="{% static "images/favicon.ico" %}"> -->
-		<link rel="shortcut icon" href="{% static "images/logo1.png" %}" height="16">
 
 	<title>Techfest 2K18</title>
 	<link rel="stylesheet" type="text/css" href="{% static "css/my.css" %}">
 	<link rel="stylesheet" type="text/css" href="{% static "css/arc.css" %}">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
-	<link rel="stylesheet" type="text/css" href="{% static "css/credits.css" %}">
-
+  <link rel="stylesheet" href="{% static "css/master.css" %}">
 	<link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
 
 </head>
@@ -27,13 +24,27 @@
 		<div class="glitch" data-text="Noida Institute of Engineering and Technology">
 			Noida Institute of Engineering and Technology <hr>
 		</div>
-		<div id="prkhrv" class="glitch prkhr1" data-text="EBULLIENCE2K18">
+		<div class="glitch prkhr3" data-text="EBULLIENCE2K18">
 			EBULLIENCE2K18
 		</div>
-		<div id="prkhr2">
+		<!-- <div id="prkhr2">
 			Welcome,{{user.username}}
-		</div>
-		 <div style="position: fixed; top:25%; height: 100%; width: 100%;">
+		</div> -->
+    <center><h1 style="color: red;font-family: 'Bai Jamjuree', sans-serif !important;z-index: 1;margin-top: 40px; ">Sorry! Registrations have been closed for this event.
+    <br> Event Timings : 2PM-5PM <br>
+  {{mail_ids}} </h1></center>
+
+{% if user.is_superuser %}  
+ <div id="regdetails">
+
+
+
+  <form method="post">
+    {% csrf_token %}
+    <input type="submit" value="send mails">
+
+  </form></div> {% endif %}
+		 <!-- <div style="position: fixed; top:25%; height: 100%; width: 100%; z-index: 0;">
 		  <div class="arc_reactor">
 		    <div class="case_container">
 		      <div class="e7">
@@ -61,42 +72,7 @@
 		      </ul>
 		    </div>
 		  </div>
-		</div>
-		<div class="container-2 first-button">
-			<a href="/" style="text-decoration:none; outline:0;"><div class="btn btn-two text-center">
-			  <span>Home</span>
-			</div></a>
-		</div>
-		<div class="container-2 second-button">
-			<a href="{% url 'events' %}" style="text-decoration:none; outline: 0;"><div class="btn btn-two text-center">
-			  <span>Events</span>
-			</div></a>
-		</div>
-		<div class="container-2 third-button">
-			<a href="{% url 'excel' %}" style="text-decoration:none;outline:0;"><div class="btn btn-two text-center">
-			  <span>Volunteer's Panel</span>
-			</div></a>
-		</div>
-		<div class="container-2 fourth-button">
-			<a href="/admin" style="text-decoration:none;outline:0;"><div class="btn btn-two text-center">
-			  <span>Admin's Panel</span>
-			</div></a>
-		</div>
-		<div class="container-2 fifth-button">
-			<a href="{% url 'about' %}" style="text-decoration:none;outline:0;"><div class="btn btn-two text-center">
-			  <span>About Us</span>
-			</div></a>
-		</div>
-		<div class="container-2 sixth-button">
-			<a href="{% url 'logout' %}" style="text-decoration:none; outline: 0;"><div class="btn btn-two text-center">
-			  <span>Log-Out</span>
-			</div></a>
-		</div>
-		<div class="credits">
-		<i class="fa fa-code-fork" style="font-size:36px"></i>
-			Designed and Developed By <a href="http://www.prakharvarshney.ooo">Prakhar Varshney</a> And
-			<a href="https://piyushmishra.pythonanywhere.com">Piyush Mishra</a>
-		</div>
+		</div> -->
 	<script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
 	<script  src="{% static "js/index.js" %}"></script>
 

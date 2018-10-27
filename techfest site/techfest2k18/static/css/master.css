@@ -1,0 +1,199 @@
+@font-face{
+	font-family: 'aven';
+	src: url('../fonts/a3.ttf');
+}
+body{
+  background: black;
+  color: white !important;
+  font-family: aven !important;
+}
+#myform{
+  width: 340px;
+  max-height: 840px;
+  background: rgba(115, 116, 117, 0.52);
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: inherit;
+  position: relative;
+  margin-top: 20px;
+}
+
+#regdetails{
+	width: 740px;
+  max-height: 1640px;
+  background: rgba(115, 116, 117, 0.52);
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: inherit;
+  position: relative;
+  margin-top: 20px;
+	color: aqua;
+	z-index: 1;
+}
+
+h1{
+  font-size: 30px;
+}
+h3{
+  font-size: 15px;
+}
+label{
+  color: aqua;
+  text-align: center;
+}
+
+#one input{
+  padding: 10px;
+  font-family: aven;
+  border: 0;
+  border-bottom: 2px solid aqua;
+  background: transparent;
+}
+#two input{
+  padding: 10px;
+  font-family: aven;
+  border: 0;
+  border-bottom: 2px solid aqua;
+  background: transparent;
+}
+#three input{
+  padding: 10px;
+  font-family: aven;
+  border: 0;
+  border-bottom: 2px solid aqua;
+  background: transparent;
+}
+#four input{
+  padding: 10px;
+  font-family: aven;
+  border: 0;
+  border-bottom: 2px solid aqua;
+  background: transparent;
+}
+
+.pwinp{
+  padding: 10px;
+  font-family: aven;
+  border: 0;
+  border-bottom: 2px solid aqua;
+  background: transparent;
+}
+
+#team_name{
+  padding: 10px;
+  font-family: aven;
+  border: 0;
+  border-bottom: 2px solid aqua;
+  background: transparent;
+}
+#members{
+  padding: 10px;
+  font-family: aven;
+  width: 280px;
+  border: 0;
+  border-bottom: 2px solid aqua;
+  background: transparent;
+}
+.regbtn{
+  padding: 10px;
+  font-family: aven;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid aqua;
+  color: #212223;
+}
+.regbtn:hover{
+  background: grey;
+  color: aqua;
+  border: 2px solid grey;
+}
+#desc h4{
+	font-size: 20px !important;
+	max-width: 700px;
+	text-align: justify;
+	font-family: 'Saira', sans-serif;
+	/* font-family: 'Black Ops One', cursive; */
+}
+#rules{
+	font-size: 18px !important;
+	max-width: 700px;
+	text-align: justify;
+	/* font-family: 'Black Ops One', cursive; */
+	font-family: 'Saira', sans-serif;
+}
+#judge{
+	font-size: 18px !important;
+	max-width: 700px;
+	text-align: justify;
+	font-family: 'Saira', sans-serif;
+	/* font-family: 'Black Ops One', cursive; */
+}
+#schedule{
+	font-size: 18px !important;
+	max-width: 700px;
+	text-align: justify;
+	font-family: 'Saira', sans-serif;
+	/* font-family: 'Black Ops One', cursive; */
+}
+#contact{
+	font-size: 18px !important;
+	max-width: 700px;
+	text-align: justify;
+	font-family: 'Saira', sans-serif;
+	/* font-family: 'Black Ops One', cursive; */
+}
+#venue{
+	font-size: 18px !important;
+	max-width: 700px;
+	text-align: justify;
+	font-family: 'Saira', sans-serif;
+	/* font-family: 'Black Ops One', cursive; */
+}
+
+@media only screen and (max-width: 768px) {
+  #myform{
+    left: 0%;
+  }
+  #members{
+    width: 200px;
+  }
+  #team_name{
+    width: 200px;
+  }
+  #one input{
+    width: 200px;
+  }
+  #two input{
+    width: 200px;
+  }
+  #three input{
+    width: 200px;
+  }
+  #four input{
+    width: 200px;
+  }
+	#rules{
+		font-size: 14px !important;
+	}
+	#judge{
+		font-size: 14px !important;
+	}
+	#schedule{
+		font-size: 14px !important;
+	}
+	#contact{
+		font-size: 14px !important;
+	}
+	#desc h4{
+		font-size: 15px !important;
+	}
+  .pwinp{
+    width: 200px;
+  }
+}

@@ -37,7 +37,10 @@ urlpatterns = [
     path('bt01/',views.bt01,name='bt01'),
     path('bph01/',views.bph01,name='bph01'),
     path('bph02/',views.bph02,name='bph02'),
+    path('ecell/',views.ecell,name='ecell'),
+    path('pixels/',views.pixels,name = 'pixels'),
     path('success/',views.success,name='success'),
     path('excel/',views.excel,name='excel'),
     path('events/',views.events,name='events'),
+    path('about/',views.dev,name='about'),
 ]
